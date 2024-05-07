@@ -24,8 +24,7 @@ const [content, setContent] = useState([])
 
   return (
     <div className='w-full h-full'>
-        <div className=''>
-
+        
        {
            content.map(character=> <Card
             key={character.id}
@@ -36,7 +35,7 @@ const [content, setContent] = useState([])
             
             />)
         }
-        </div>
+       
     </div>
   )
 }
