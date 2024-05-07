@@ -5,7 +5,7 @@ import { Car } from '../../Car/Car'
 
 export const Header = () => {
   return (
-    <div className='flex justify-center items-start w-full h-full bg-slate-700' >
+    <div className='flex justify-center items-start w-full h-{18%} bg-slate-700' >
 
        <h1 className='text-6xl '>Mercado</h1>
       <Car/>

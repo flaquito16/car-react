@@ -23,7 +23,7 @@ const [content, setContent] = useState([])
             },[content])
 
   return (
-    <div className='w-full h-full'>
+    <div className='w-full flex justify-center flex-wrap'>
         
        {
            content.map(character=> <Card
