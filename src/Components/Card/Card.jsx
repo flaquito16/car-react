@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { tasksContext } from '../Context/Context'
 
 export const Card = ({image, title, description, price}) => {
-//     const [imgTask, setImgTask] = useState ('')
+    const [imgTask, setImgTask] = useState ([])
   const [priceTask, setPriceTask] = useState ('')
     const [titleTask, setTitleTask] = useState ('')
 //   const [descriptionTask, setDescriptionTask] = useState ('')
@@ -12,6 +12,7 @@ export const Card = ({image, title, description, price}) => {
 
       const itemsTasks ={
         key:id,
+        image: imgTask,
         title: titleTask,
         price: priceTask
       }
@@ -24,7 +25,7 @@ export const Card = ({image, title, description, price}) => {
   return (
     <div className="flex  w-1/5 h-1/5 flex-col ">
       <div className='w-full h-1/6 flex justify-center'>
-      <img className='w-40 h-40 ' src={image} alt={title} />
+      <img onChange={event=>setImgTask(event.target.value)} className='w-40 h-40 ' src={image} alt={title} />
       </div>
         <div className="h-5/6">
             <h1 onChange={event=>setTitleTask(event.target.value)} className="">{title}</h1>
