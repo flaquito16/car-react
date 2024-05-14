@@ -7,7 +7,7 @@ export const Main = () => {
 
     const URL='https://fakestoreapi.com/products'
 
-const [content, setContent] = useState([])
+
 
 
     useEffect(() => {
@@ -15,18 +15,15 @@ const [content, setContent] = useState([])
             fetch(URL)
             .then( response => response.json() )
             .then (data => {
-                setContent (data)
-
-
-
+                localStorage.setItem('products', JSON.stringify(data))
                 });
-            },[content])
+            })
 
   return (
     <div className='w-full flex justify-center flex-wrap'>
         
        {
-           content.map(character=> <Card
+           JSON.parse(localStorage.getItem('products')).map(character=> <Card
             key={character.id}
             image={character.image}
             title={character.title}

@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const ItemsTasks = ({}) => {
+export const ItemsTasks = ({idTask,image, title, price}) => {
   return (
-    <div>ItemsTasks</div>
+    <div>
+
+    </div>
   )
 }

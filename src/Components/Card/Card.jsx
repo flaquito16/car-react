@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { tasksContext } from '../Context/Context'
 
 export const Card = ({image, title, description, price}) => {
-    const [imgTask, setImgTask] = useState ([])
+    const [imgTask, setImgTask] = useState ('')
   const [priceTask, setPriceTask] = useState ('')
     const [titleTask, setTitleTask] = useState ('')
 //   const [descriptionTask, setDescriptionTask] = useState ('')
