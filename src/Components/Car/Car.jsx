@@ -13,7 +13,7 @@ export const Car = () => {
       <Container>
       {
 
-        contexts.tasks.map((task) => <ItemsTasks key={task.id} idTask={task.id} image={task.image} title={task.title} price={task.price}/>)
+        contexts.tasks.map((task) => <ItemsTasks key={task.id} idTasks={task.id}  image={task.images} title={task.titles} price={task.prices}/>)
 
       }
 
